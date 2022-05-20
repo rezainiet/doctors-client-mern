@@ -5,7 +5,7 @@ import Service from './Service';
 
 const AvailableAppointments = ({ date }) => {
     const [services, setServices] = useState([]);
-    const [treatment, setTreatment] = useState({});
+    const [treatment, setTreatment] = useState(null);
 
     useEffect(() => {
         fetch('http://localhost:4000/service')
@@ -24,13 +24,12 @@ const AvailableAppointments = ({ date }) => {
                             setTreatment={setTreatment}
                         ></Service>)
                 }
+                {treatment && <BookingModal
+                    date={date}
+                    treatment={treatment}
+                    setTreatment={setTreatment}
+                ></BookingModal>}
             </div>
-            console.log(treatment);
-            (treatment && <BookingModal
-                date={date}
-                treatment={treatment}
-                setTreatment={setTreatment}
-            ></BookingModal>)
         </div>
     );
 };
