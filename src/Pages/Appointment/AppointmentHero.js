@@ -5,9 +5,9 @@ import 'react-day-picker/dist/style.css';
 const AppointmentHero = ({ date, setDate }) => {
 
     return (
-        <div class="hero min-h-screen">
-            <div class="hero-content flex-col lg:flex-row-reverse">
-                <img src={appointmentHero} class="max-w-sm rounded-lg shadow-2xl" alt='Doctors Chair' />
+        <div className="hero min-h-screen">
+            <div className="hero-content flex-col lg:flex-row-reverse">
+                <img src={appointmentHero} className="max-w-sm rounded-lg shadow-2xl" alt='Doctors Chair' />
                 <div>
                     <DayPicker
                         mode="single"
