@@ -24,7 +24,7 @@ function App() {
             <Appointment />
           </RequireAuth>} />
       </Routes>
-      <ToastContainer></ToastContainer>
+      <ToastContainer />
     </div>
   );
 }
