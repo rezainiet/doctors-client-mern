@@ -24,7 +24,7 @@ const Login = () => {
 
     useEffect(() => {
         if (token) {
-            naviagte(from, { replace: true })
+            naviagte(from, { replace: true });
         }
     }, [token, from, naviagte]);
 
@@ -38,7 +38,6 @@ const Login = () => {
 
 
     const onSubmit = data => {
-        console.log(data);
         signInWithEmailAndPassword(data.email, data.password);
     };
 

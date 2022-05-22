@@ -1,5 +1,5 @@
 import Navbar from "./Pages/Shared/Navbar";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Login from "./Pages/Login/Login"
@@ -12,6 +12,8 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyAppointment from "./Pages/Dashboard/MyAppointment";
 import MyReview from "./Pages/Dashboard/MyReview";
 import MyHistory from "./Pages/Dashboard/MyHistory";
+import Users from "./Pages/Dashboard/Users";
+import RequireAdmin from "./Pages/Login/RequireAdmin";
 
 function App() {
 
@@ -34,6 +36,8 @@ function App() {
           <Route index element={<MyAppointment></MyAppointment>}></Route>
           <Route path="review" element={<MyReview></MyReview>}></Route>
           <Route path="history" element={<MyHistory></MyHistory>}></Route>
+          <Route path="users" element={<Users></Users>}></Route>
+          <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
         </Route>
       </Routes>
       <ToastContainer />

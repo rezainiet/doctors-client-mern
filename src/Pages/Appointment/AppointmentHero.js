@@ -1,13 +1,18 @@
-import appointmentHero from '../../assets/images/chair.png';
+import React from 'react';
+import chair from '../../assets/images/chair.png';
+import bg from '../../assets/images/bg.png';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 
 const AppointmentHero = ({ date, setDate }) => {
 
     return (
-        <div className="hero min-h-screen">
+        <div style={{
+            background: `url(${bg})`,
+            backgroundSize: 'cover'
+        }} className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src={appointmentHero} className="max-w-sm rounded-lg shadow-2xl" alt='Doctors Chair' />
+                <img src={chair} className="max-w-sm rounded-lg shadow-2xl" alt='Dentist Chair' />
                 <div>
                     <DayPicker
                         mode="single"
@@ -16,6 +21,7 @@ const AppointmentHero = ({ date, setDate }) => {
                     />
                 </div>
             </div>
+
         </div>
     );
 };
